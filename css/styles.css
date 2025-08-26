@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'DigitalDisco';
+  src: url('../fonts/DIGITALDISCO.TTF') format('truetype');
+}
+
+/* Animations */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px #eca4dd; }
+  50% { box-shadow: 0 0 20px #fac2ed; }
+}
+
+
+/* Body */
+body {
+  height: 100vh;
+  background-image: url('../images/bg.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'DigitalDisco', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex container for profile + projects */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 5rem 1rem 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Profile box */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  flex: 1;
+  min-width: 220px;         
+  max-width: 300px;         
+  width: 25%;               
+
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+
+  box-shadow: inset 0px 0px 10px 2px #ffbaf9,
+              0 4px 12px rgba(0,0,0,0.15);
+}
+
+.profile-container .pfp-head {
+  font-size: x-large;
+  margin: auto;
+  color: #000000;
+  background-color: #d88deb;
+  padding: 1px 1rem;
+  width: fit-content;
+  border-radius: 3rem;
+}
+
+.profile-container p {
+  font-family: DigitalDisco, sans-serif;
+  margin: 3px auto;
+  font-weight: 600;
+  color: slategray;
+  text-align: center;
+}
+
+.profile-container .name {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fac2ed; 
+  padding: 2px 30px 0 30px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #de2db4;
+}
+
+/* Profile picture */
+.profile-pic {
+  margin: 40px auto 30px auto;
+  background-image: url('../images/cat.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 105px;
+  animation: float 4s ease-in-out infinite, glow 5s ease-in-out infinite;
+}
+
+
+.prog-lag p {
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
+}
+
+.prog-lag .python   { background-color: #eeff05; }
+.prog-lag .sharp    { background-color: #a3ff05; }
+.prog-lag .html     { background-color: #ffb405; }
+.prog-lag .css      { background-color: #ff1e05; }
+.prog-lag .dart     { background-color: #0548ff; }
+.prog-lag .figma    { background-color: #ff05d4; }
+.prog-lag .microsoft{ background-color: #b805ff; }
+
+.divider {
+  width: 100%;
+  border-top: 2px solid #ccc;
+  margin: 5px 0;
+}
+
+.socials {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.socials p, .socials a {
+  text-decoration: none;
+  color: #de2db4;
+  margin-left: 5px; 
+  text-align: left;
+}
+
+.email-icon{
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.contact-icon{
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Project section */
+.project-section {
+  width: 760px;
+}
+
+.button-tab {
+  display: flex; 
+  gap: 10px;
+}
+
+.button-tab a {
+  font-family: DigitalDisco, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 6px 14px;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.project-container { 
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 8px 8px 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.lab-act {
+  background-color: #fef8ff;
+  border: 2px solid #f5c5ff;
+  border-radius: 3px;
+  padding: 5px 10px;
+  box-shadow: inset 0px 0px 5px #bb97c2;
+}
+
+.lab-folder {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.lab-folder:hover {
+  box-shadow: inset 0px 0px 15px 1px #a797c2;
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+.folder-section {
+  display: flex;
+  gap: 15px;
+}
+
+.folder-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0;
+}
+
+.lab-act p {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+/* Headings */
+h4 {
+  margin: 10px 5px;
+  font-size: larger;
+}
+
+h5 {
+  margin: 0.5rem auto;
+  font-size: large;
+  text-align: left;
+}
+
+/* Tab styles */
+.tab {
+  text-decoration: none;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 5px 5px 0 0;
+  transition: 0.2s;
+}
