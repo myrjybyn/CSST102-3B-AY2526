@@ -11,8 +11,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 5px #eca4dd; }
-  50% { box-shadow: 0 0 20px #fac2ed; }
+  0%, 100% { box-shadow: 0 0 5px #9d90ff; }
+  50%      { box-shadow: 0 0 20px #b5acff; }
 }
 
 
@@ -28,7 +28,6 @@ body {
   padding: 0;
 }
 
-/* Flex container for profile + projects */
 .main-container {
   display: flex;
   justify-content: center;
@@ -39,7 +38,6 @@ body {
   margin: 0 auto;
 }
 
-/* Profile box */
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -55,15 +53,15 @@ body {
   padding: 1.5rem;
   border-radius: 12px;
 
-  box-shadow: inset 0px 0px 10px 2px #ffbaf9,
+  box-shadow: inset 0px 0px 10px 2px #988bfd,
               0 4px 12px rgba(0,0,0,0.15);
 }
 
 .profile-container .pfp-head {
   font-size: x-large;
   margin: auto;
-  color: #000000;
-  background-color: #d88deb;
+  color: #fef6ec;
+  background-color: #613d91;
   padding: 1px 1rem;
   width: fit-content;
   border-radius: 3rem;
@@ -78,14 +76,14 @@ body {
 }
 
 .profile-container .name {
-  color: #000000;
+  color: #4b3cbb;
   font-size: 20px;
   font-weight: bold;
-  background-color: #fac2ed; 
+  background-color: #fef6ec; 
   padding: 2px 30px 0 30px;
   margin: 0 auto;
   text-align: center;
-  border: 2px solid #de2db4;
+  border: 2px solid #000000;
 }
 
 /* Profile picture */
@@ -100,14 +98,25 @@ body {
   animation: float 4s ease-in-out infinite, glow 5s ease-in-out infinite;
 }
 
+.prog-lag {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+.lang-tags {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 5px;
+}
 
 .prog-lag p {
+  margin: 0;           
+  display: inline-block;
+  text-align: left;
   font-weight: bold;
   color: black;
-  text-align: left;
   margin-bottom: 10px;
-  display: inline-flex;
-  align-items: center;
   border-radius: 5px;
   width: fit-content;
   padding: 5px;
@@ -134,15 +143,16 @@ body {
 
 .socials p, .socials a {
   text-decoration: none;
-  color: #de2db4;
+  color: #4b3cbb;
   margin-left: 5px; 
   text-align: left;
 }
 
 .email-icon{
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   margin-right: 5px;
+  border-radius: 5px;
   vertical-align: middle;
 }
 
@@ -150,7 +160,7 @@ body {
   width: 18px;
   height: 18px;
   margin-right: 8px;
-  vertical-align: middle;
+  vertical-align: middle; /* aligns text with icon */
 }
 
 /* Project section */
@@ -182,13 +192,13 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
+/* Lab activities */
 .lab-act {
-  background-color: #fef8ff;
-  border: 2px solid #f5c5ff;
+  background-color: #fbf8ff;
+  border: 2px solid #8137e1;
   border-radius: 3px;
   padding: 5px 10px;
-  box-shadow: inset 0px 0px 5px #bb97c2;
+  box-shadow: inset 0px 0px 5px #613d91;
 }
 
 .lab-folder {
@@ -244,3 +254,4 @@ h5 {
   border-radius: 5px 5px 0 0;
   transition: 0.2s;
 }
+
